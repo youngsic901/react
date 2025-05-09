@@ -1,4 +1,6 @@
 import {Component} from "react";
+import Navdata from "./mycomponent/Navdata";
+
 // class component
 class Subject extends Component{
   render(){
@@ -28,6 +30,8 @@ function App() { // index.js에 의해 index.html에 호출되는 JS 모듈
       <h2>메인 컴포넌트</h2>
       <Welcome></Welcome>
       <Welcome who="홍길동님"></Welcome>
+      <hr/>
+      <Navdata msg="가자"></Navdata>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 // 일반변수(지역변수)에 데이터를 기억 후 변경하면 리렌더링하지 않음
 // 상태변수(state)에 데이터를 기억 후 변경하면 자동으로 리렌더링함
+//test
 
 function App() {
   // 일반변수

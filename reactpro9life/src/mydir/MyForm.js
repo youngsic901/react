@@ -7,23 +7,29 @@ function MyForm() {
         menu:'파전'
     });
     
+    useEffect(() =>  {
+        console.log({formData});
+    },[formData]);
+
     const dataChange = (e) => {
         const name = e.target.name; // form tag 내의 여러 tag의 name 속성 얻기
         const value = e.target.value;
-        console.log({[name]:value});
-        console.log({...formData});
-
-        setFormData({
-            ...formData, // formData 객체의 모든 키:값을 복사해 새로운 객체를 생성
+        
+        setFormData(prev => ({
+            ...prev, // formData 객체의 모든 키:값을 복사해 새로운 객체를 생성
             [name]:value // form tag 내의 변경된 name에서 가져온 값으로 해당 필드만 갱신
-        })
+        }));
+
+        // console.log({...formData});
+        console.log({[name]:value});
+        
     }
     
     const dataSubmit = (e) => { // 입력자료 오류 검사, 나이가 숫자인지 확인
        e.preventDefault();
 
        const {nai} = formData;
-       if(!Number(nai) || isNaN(Number(nai))){
+       if(nai.trim() === '' || isNaN(Number(nai))){
         alert("나이는 숫자로 입력");
        }
     }
@@ -36,9 +42,9 @@ function MyForm() {
                 <br/>
                 나이 입력 : <input type="text" name="nai" onChange={dataChange} />
                 <br/>
-                야식 입력 : <select name="menu" onChange={dataChange}>
+                야식 입력 : <select name="menu" value={formData.menu} onChange={dataChange}>
                     <option value="치킨">치킨</option>
-                    <option value="파전" selected="select">파전</option>
+                    <option value="파전">파전</option>
                     <option value="족발">족발</option>
                 </select>
                 <br/><br/>

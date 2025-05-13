@@ -34,6 +34,19 @@ function MyForm() {
        }
     }
 
+    // 초기 렌더링시 1회 실행 (componentDidMount와 유사)
+    useEffect(() => {
+        console.log('MyForm 컴포넌트가 마운트 됨');
+        return() => {
+            console.log('MyForm 컴포넌트가 언마운트 처리됨'); // 정리작업 처리 위치치
+        }
+    },[]);
+
+     // 상태가 업데이트 될 때마다 실행 (componentDidUpdate와 유사)
+    useEffect(() => {
+        console.log('formData 상태가 변경됨', formData);
+    },[formData]);
+
     return(
         <>
             <h3>안녕 {formData.irum}, 너는 {formData.nai}살 선택한 음식은 {formData.menu}</h3>

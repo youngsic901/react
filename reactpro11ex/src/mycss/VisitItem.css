@@ -1,0 +1,26 @@
+.visit-item{
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.visit-item:hover{
+    background-color: #8ecae6;
+    .remove{
+        opacity: 1;
+    }
+}
+
+.visit-text{
+    flex: 1;
+}
+
+.checked{
+    text-decoration: line-through;
+    color: #fb8500;
+}
+
+.remove{
+    margin-right: 5px;
+    opacity: 0;
+}

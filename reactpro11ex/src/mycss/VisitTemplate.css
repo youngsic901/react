@@ -1,0 +1,18 @@
+.visit-list-templates{
+    width: 50vw;
+    min-width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
+}   
+
+.title{
+    padding: 10px;
+    font-size: 24pt;
+    text-align: center;
+    background-color: #ffb703;
+}
+
+.form-wrapper{
+    padding: 5px;
+    border-bottom: 1px solid #fb8500;
+}

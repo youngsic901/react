@@ -1,18 +1,27 @@
-.visit-list-templates{
-    width: 50vw;
-    min-width: 500px;
-    margin: 0 auto;
-    margin-top: 10px;
-}   
-
-.title{
-    padding: 10px;
-    font-size: 24pt;
-    text-align: center;
-    background-color: #ffb703;
+:root {
+  --main-bg-color: #ffb703;
+  --border-color: #fb8500;
 }
 
-.form-wrapper{
-    padding: 5px;
-    border-bottom: 1px solid #fb8500;
+.visit-list-templates {
+  width: 50vw;
+  min-width: 500px;
+  max-width: 768px;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.title {
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  font-weight: bold;
+}
+
+.form-wrapper {
+  padding: 5px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 10px;
 }

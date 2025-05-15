@@ -17,22 +17,6 @@ const Jikwon = () => {
         .then((result) => {
             setIsLoaded(true);
             setItems(result.data.items);
-            setList(
-                <table border={1}>
-                    <thead>
-                        <tr>
-                            <th>직원번호</th><th>직원명</th><th>부서명</th><th>직급</th><th>담당고객수</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {items.map(item => (
-                            <tr key={item.jikwonno}>
-                                <td>{item.jikwonno}</td><td>{item.jikwonname}</td><td>{item.busername}</td><td>{item.jikwonjik}</td><td>{item.gogeksu}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            );
         })
         .catch((error) => {
             setIsLoaded(true);

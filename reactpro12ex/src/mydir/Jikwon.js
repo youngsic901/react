@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import axios from "axios";
 
 const Jikwon = () => {
@@ -6,7 +6,6 @@ const Jikwon = () => {
     const [isLoaded, setIsLoaded] = useState(null);
     const [items, setItems] = useState([]);
     const [input, setInput] = useState('');
-    const [list, setList] = useState();
 
     const handleChange = (e) => {
         setInput(e.target.value);

@@ -27,9 +27,9 @@ const Jikwon = () => {
         <div>
             <input type="text" name="busername" placeholder="부서명" value={input} onChange={handleChange}/>
             <button onClick={printList}>등록</button>
-            {error && <div>오류 발생: {error.message}</div>}
-            {isLoaded && items.length === 0 && <div>검색 결과가 없습니다.</div>}
-            {items.length > 0 &&
+            {
+                error ? <div>오류 발생 : {error.message}</div> : 
+                !isLoaded ? <div>로딩중 ...</div> :
                 <table border={1}>
                     <thead>
                         <tr>

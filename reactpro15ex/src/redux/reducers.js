@@ -17,6 +17,7 @@ const employees2Reducer = (state = [], action) => {
             return state;
     }
 };
+//state = action.payload
 
 export default combineReducers({
     employees: employeesReducer,
